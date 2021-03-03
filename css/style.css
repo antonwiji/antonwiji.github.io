@@ -1,0 +1,52 @@
+#projects {
+  background-color: #8cc0fe;
+}
+
+#contact {
+  background-color: #8cc0fe;
+}
+.kontak {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-color: #8cc0fe;
+}
+.footer {
+  background-color: rgb(72 146 234);
+}
+
+.fa {
+  padding: 17px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: rgb(243, 35, 35);
+}
+
+.fa-whatsapp {
+  background: #3b5998;
+  color: rgb(2, 175, 17);
+}
+p {
+  font-weight: 500;
+}
+section {
+  padding-top: 4rem;
+}
