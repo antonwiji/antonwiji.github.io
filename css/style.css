@@ -14,6 +14,12 @@
 .footer {
   background-color: rgb(72 146 234);
 }
+.use {
+  display: inline-block;
+}
+.use img {
+  padding-left: 5px;
+}
 
 .fa {
   padding: 17px;
@@ -43,6 +49,10 @@
 .fa-whatsapp {
   background: #3b5998;
   color: rgb(2, 175, 17);
+}
+.fa-github {
+  background: #3b5998;
+  color: #000;
 }
 p {
   font-weight: 500;
