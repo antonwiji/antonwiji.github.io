@@ -1,10 +1,7 @@
-#projects {
+#projects, #tool{
   background-color: #8cc0fe;
 }
 
-#contact {
-  background-color: #8cc0fe;
-}
 .kontak {
   display: inline-block;
   width: 100px;
