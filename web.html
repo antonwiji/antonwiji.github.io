@@ -7,7 +7,7 @@
 <style>
   :root{
     --ink:#0a1420;--ink-2:#4a5a6c;--line:#e4e8ee;--bg:#ffffff;--bg-soft:#f4f7fb;
-    --accent:#e60012;--accent-dark:#b3000e;--radius:14px;
+    --accent:#001a45;--accent-dark:#00102e;--radius:14px;
     --shadow:0 10px 40px rgba(10,20,32,.10);--shadow-lg:0 24px 60px rgba(10,20,32,.18);--maxw:1220px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -23,6 +23,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;letter-spacing:-.5px}
   .logo .dot{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:inline-block}
+  .logo .logo-img{width:92px;height:92px;object-fit:contain;display:block}
   .menu{display:flex;gap:30px;list-style:none;font-weight:600;font-size:.95rem}
   .menu a{color:var(--ink-2);transition:color .2s;position:relative}
   .menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:width .25s}
@@ -38,14 +39,14 @@
   @keyframes slowzoom{to{transform:scale(1.14)}}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,13,22,.92) 0%,rgba(6,13,22,.72) 45%,rgba(6,13,22,.30) 100%)}
   .hero-inner{position:relative;z-index:2; padding:72px 0}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#ff5566;margin-bottom:20px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#7ba7ff;margin-bottom:20px}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
   .hero h1{font-size:clamp(2.1rem,5.4vw,4rem);line-height:1.08;font-weight:800;letter-spacing:-1.5px;margin-bottom:20px}
-  .hero h1 span{color:#ff4d5f}
+  .hero h1 span{color:#6b9bff}
   .hero p{font-size:1.12rem;color:#c9d6e3;margin-bottom:34px;max-width:540px}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
   .btn{display:inline-block;background:var(--accent);color:#fff;padding:15px 32px;border-radius:9px;font-weight:700;transition:transform .15s,background .2s,box-shadow .2s;text-align:center}
-  .btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(230,0,18,.4)}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,26,69,.45)}
   .btn-ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
   .btn-ghost:hover{background:rgba(255,255,255,.16);box-shadow:none}
   .hero-stats{display:flex;flex-wrap:wrap;gap:20px 44px;margin-top:52px}
@@ -61,7 +62,7 @@
   .filters{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-bottom:46px}
   .chip{border:1.5px solid var(--line);background:#fff;color:var(--ink-2);padding:10px 22px;border-radius:30px;font-weight:600;font-size:.9rem;cursor:pointer;transition:.2s}
   .chip:hover{border-color:var(--accent);color:var(--accent)}
-  .chip.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(230,0,18,.28)}
+  .chip.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(0,26,69,.32)}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
   .card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
@@ -121,8 +122,11 @@
   footer li{margin-bottom:11px}
   footer a{transition:color .2s}
   footer a:hover{color:#fff}
-  .fbrand .logo{color:#fff;margin-bottom:16px}
-  .fbrand p{max-width:300px}
+  .fbrand .logo{color:#fff;margin-bottom:18px;font-size:1.05rem;line-height:1.2;gap:12px}
+  .fbrand .logo .logo-img{width:56px;height:56px;background:#fff;padding:6px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .fbrand p{max-width:320px;margin-bottom:18px}
+  .fbrand address{font-style:normal;font-size:.88rem;line-height:1.6;color:#9fb2c4;max-width:320px;display:flex;gap:10px;align-items:flex-start}
+  .fbrand address svg{flex:0 0 auto;width:24px;height:24px;color:#6b9bff;margin-top:2px}
   .fbottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.82rem}
 
   .fab{position:fixed;right:22px;z-index:90;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;box-shadow:0 10px 28px rgba(10,20,32,.22);transition:transform .2s,box-shadow .2s,opacity .3s,visibility .3s}
@@ -177,6 +181,7 @@
     .chip{flex:0 0 auto}
     .gallery{grid-template-columns:1fr;grid-auto-rows:190px}
     .g-wide{grid-column:span 1}
+    .fbrand p{max-width:620px;margin-bottom:18px}
   }
 </style>
 </head>
@@ -184,7 +189,12 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="dot"></span>VisionLED</a>
+    <a href="#" class="logo"><img src="img/logo-company.png" alt="TRIKARYA_HARAPAN_PRATAMA" class="logo-img">
+      <!-- <p
+      style="font-size: 14px;"
+      >TRIKARYA HARAPAN PRATAMA
+    </p> -->
+    </a>
     <nav>
       <ul class="menu" id="menu">
         <li><a href="#products">Produk</a></li>
@@ -332,8 +342,12 @@
   <div class="wrap">
     <div class="fcols">
       <div class="fbrand">
-        <a href="#" class="logo"><span class="dot"></span>VisionLED</a>
+        <a href="#" class="logo"><img src="img/logo-company.png" alt="Trikarya Harapan Pratama" class="logo-img">PT TRIKARYA HARAPAN PRATAMA</a>
         <p>Penyedia solusi tampilan LED profesional untuk kebutuhan komersial dan industri di Indonesia.</p>
+        <address>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Jl. Bungur Besar Raya Ruko Sentral No.38L,<br>Kel. Bungur, Kec. Kemayoran, Jakarta Pusat 10610</span>
+        </address>
       </div>
       <div><h5>Produk</h5><ul><li><a href="#products">Indoor LED</a></li><li><a href="#products">Meeting Room</a></li><li><a href="#products">Video Wall</a></li><li><a href="#products">Fine Pitch</a></li></ul></div>
       <div><h5>Aplikasi</h5><ul><li><a href="#showcase">Ruang Rapat</a></li><li><a href="#showcase">Control Room</a></li><li><a href="#showcase">Lobi &amp; Retail</a></li><li><a href="#showcase">Command Center</a></li></ul></div>
